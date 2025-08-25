@@ -1,0 +1,25 @@
+
+class Solution:
+    def reverseWords(self, s: str) -> str:
+        # Split by spaces, remove extra spaces, and reverse
+        words = s.strip().split()
+        return " ".join(reversed(words))
+
+
+if __name__ == "__main__":
+    sol = Solution()
+    
+    # Example 1
+    s1 = "the sky is blue"
+    print("Input: ", s1)
+    print("Output:", sol.reverseWords(s1))  # "blue is sky the"
+    
+    # Example 2
+    s2 = "  hello   world  "
+    print("\nInput: ", s2)
+    print("Output:", sol.reverseWords(s2))  # "world hello"
+    
+    # Example 3
+    s3 = "a good   example"
+    print("\nInput: ", s3)
+    print("Output:", sol.reverseWords(s3))  # "example good a"
