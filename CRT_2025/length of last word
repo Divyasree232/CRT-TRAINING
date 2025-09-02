@@ -1,0 +1,10 @@
+class Solution:
+    def lengthOfLastWord(self, s: str) -> int:
+        # Remove trailing spaces
+        s = s.rstrip()
+        
+        # Split into words
+        words = s.split(" ")
+        
+        # The last word is at the end
+        return len(words[-1])
