@@ -1,0 +1,12 @@
+class Solution:
+    def maxProfit(self, prices):
+        minPrice = float('inf')   # start with very high value
+        maxProfit = 0             # no profit initially
+        
+        for price in prices:
+            if price < minPrice:
+                minPrice = price   # update buying price
+            elif price - minPrice > maxProfit:
+                maxProfit = price - minPrice   # update profit if better
+                
+        return maxProfit
