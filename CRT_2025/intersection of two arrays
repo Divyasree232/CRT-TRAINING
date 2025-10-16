@@ -1,0 +1,13 @@
+from typing import List
+
+class Solution:
+    def intersection(self, nums1: List[int], nums2: List[int]) -> List[int]:
+        # Convert both lists to sets to get unique elements
+        set1 = set(nums1)
+        set2 = set(nums2)
+        
+        # Intersection of two sets
+        result = set1 & set2  # or set1.intersection(set2)
+        
+        # Convert back to list
+        return list(result)
